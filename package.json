@@ -1,0 +1,30 @@
+{
+  "name": "learning-typescript",
+  "version": "1.0.0",
+  "description": "Getting started with TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "rimraf": "./node_modules/rimraf/bin.js",
+    "clean": "rimraf dist/",
+    "build": "npm run clean && tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srihari-sridharan/learning-typescript.git"
+  },
+  "keywords": [
+    "TypeScript"
+  ],
+  "author": "Srihari Sridharan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srihari-sridharan/learning-typescript/issues"
+  },
+  "homepage": "https://github.com/srihari-sridharan/learning-typescript#readme",
+  "dependencies": {
+    "typescript": "^3.9.5"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  }
+}

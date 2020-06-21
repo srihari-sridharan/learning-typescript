@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "outDir": "dist",
+    "target": "ES5"
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules", "dist"]
+}

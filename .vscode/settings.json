@@ -1,0 +1,56 @@
+{
+    "workbench.colorTheme": "Visual Studio Dark",
+    "explorer.confirmDelete": false,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "window.zoomLevel": 0,
+    "java.home": "C:\\Users\\Srihari\\AppData\\Local\\Programs\\AdoptOpenJDK",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "[perl]": {
+        "editor.defaultFormatter": "sfodje.perltidy"
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "javascript.format.enable": false,
+    "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true,
+    "cSpell.userWords": [
+        "IIFEs",
+        "Sridharan",
+        "Srihari",
+        "destructured",
+        "transpilation",
+        "transpiled",
+        "transpiler",
+        "transpiles",
+        "typeof"
+    ],
+    "editor.fontFamily": "'Courier New'",
+    "debug.console.fontFamily": "'Courier New'",
+    "terminal.integrated.fontFamily": "'Courier New'",
+    "todohighlight.keywords": [{
+            "color": "#ff0000",
+            "backgroundColor": "yellow",
+            "overviewRulerColor": "grey",
+            "text": "TOPIC:"
+        },
+        {
+            "color": "#ff0000",
+            "backgroundColor": "blue",
+            "overviewRulerColor": "grey",
+            "text": "SUBTOPIC:"
+        },
+        {
+            "color": "#ff0000",
+            "backgroundColor": "orange",
+            "overviewRulerColor": "grey",
+            "text": "IMPORTANT NOTE:"
+        }
+    ],
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4
+}
