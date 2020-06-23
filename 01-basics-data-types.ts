@@ -1,11 +1,11 @@
 // TOPIC: 🌟  Basic Data Types
 
-function printSeparator() {
+function printSeparator01() {
     console.log();
     console.log('----------------------------------------');
     console.log();
 }
-printSeparator();
+printSeparator01();
 
 // SUBTOPIC: ⭐  Boolean - true / false
 let isTaskCompleted: boolean = false;
@@ -27,7 +27,7 @@ let role: string = 'Principal Member of Technical Staff';
 // SUBTOPIC: ⭐  Interpolation
 let sentence: string = `Hi, my name is ${employeeName} and my role is ${role}.`;
 console.log(`sentence: ${sentence}`);
-printSeparator();
+printSeparator01();
 
 // IMPORTANT NOTE: ✍🏽  Not available when targeting less than ES2020
 // Part of upcoming spec!
@@ -55,13 +55,13 @@ fibonacci(10000n);
 let names: string[] = ['Ben', 'Sam', 'Bill'];
 console.log('names:');
 console.log(names);
-printSeparator();
+printSeparator01();
 
 // SUBTOPIC: ⭐  Array using generics
 let marks: Array<number> = [78, 89, 96];
 console.log('marks:');
 console.log(marks);
-printSeparator();
+printSeparator01();
 
 // SUBTOPIC: ⭐  Tuples
 // Array of fixed number of elements whose type need not be necessarily the same.
@@ -69,14 +69,14 @@ printSeparator();
 let contact: [string, number, string] = ['John Doe', 37, '+19876543210'];
 console.log('contact:');
 console.log(contact);
-printSeparator();
+printSeparator01();
 
 // Element can be accessed using index and the correct type is checked.
 let subString = contact[0].substring(1);
 // contact[1].subString(1); // The subString() method is not available and not shown in intellisense.
 console.log(`subString(1) on ${contact[0]} gives:`);
 console.log(subString);
-printSeparator();
+printSeparator01();
 
 // SUBTOPIC: ⭐  Enumeration a.k.a Enum
 // Starts with 0 by default. We can assign custom value to start - set to 1 and observe generated JS code.
@@ -94,7 +94,7 @@ console.log('DaysOfWeek');
 console.log(DaysOfWeek);
 console.log('DaysOfWeek.Sunday');
 console.log(DaysOfWeek.Sunday);
-printSeparator();
+printSeparator01();
 
 // SUBTOPIC: ⭐  Enums can also be assigned with strings!
 // IMPORTANT NOTE: ✍🏽  Observe the JS code in this case too!
@@ -117,7 +117,7 @@ console.log('Months');
 console.log(Months);
 console.log('Months.January');
 console.log(Months.January);
-printSeparator();
+printSeparator01();
 
 // SUBTOPIC: ⭐  any
 // Any type is used when the type of the variable cannot be determined at the time of writing the application.
@@ -183,4 +183,4 @@ console.log(`len: ${len}`);
 // SUBTOPIC: ⭐  as operator
 let len1: number = (sample as string).length; // <string> type within angle brackets.
 console.log(`len1: ${len1}`);
-printSeparator();
+printSeparator01();

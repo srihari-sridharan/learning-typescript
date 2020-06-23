@@ -1,11 +1,12 @@
 // TOPIC: 🌟  Variable Declarations
 
-function printSeparator() {
+function printSeparator02() {
     console.log();
     console.log('----------------------------------------');
     console.log();
 }
-printSeparator();
+
+printSeparator02();
 
 // SUBTOPIC: ⭐  Use of var
 // Never use var (it is ES5 style!)
@@ -80,7 +81,7 @@ let letters = ['A', 'B'];
 let [first, second] = letters;
 console.log(`first: ${first}`); // outputs first: A
 console.log(`second: ${second}`); // outputs second: B
-printSeparator();
+printSeparator02();
 
 // Equivalent code using indexing!
 first = letters[0];
@@ -91,7 +92,7 @@ second = letters[1];
 console.log('After swapping:');
 console.log(`first: ${first}`); // outputs first: B
 console.log(`second: ${second}`); // outputs second: A
-printSeparator();
+printSeparator02();
 
 // SUBTOPIC: ⭐ Can be used in parameters to functions
 function printLetters([first, second]: [string, string]) {
@@ -101,23 +102,23 @@ function printLetters([first, second]: [string, string]) {
 }
 
 printLetters(['A', 'B']);
-printSeparator();
+printSeparator02();
 
 // SUBTOPIC: ⭐ Spread Operator
 let [firstLetter, ...restOfTheLetters] = ['A', 'B', 'C', 'D'];
 console.log(`firstLetter: ${firstLetter}`); // outputs A
 console.log(`restOfTheLetters: ${restOfTheLetters}`); // outputs [ B, C, D ]
-printSeparator();
+printSeparator02();
 
 // SUBTOPIC: ⭐ Ignore trailing elements or other elements
 let [firstNumber] = [1, 2, 3, 4];
 console.log(`firstNumber: ${firstNumber}`); // outputs 1
-printSeparator();
+printSeparator02();
 
 let [, secondNumber, , fourthNumber] = [1, 2, 3, 4];
 console.log(`secondNumber: ${secondNumber}`); // outputs 2
 console.log(`fourthNumber: ${fourthNumber}`); // outputs 4
-printSeparator();
+printSeparator02();
 
 // SUBTOPIC: ⭐ Tuple Destructuring
 // Tuple can be destructured like an array.
@@ -127,13 +128,13 @@ let [a, b, c] = myTuple; // a: number, b: string, c: boolean
 console.log(`a: ${a}`);
 console.log(`b: ${b}`);
 console.log(`c: ${c}`);
-printSeparator();
+printSeparator02();
 
 // Destructuring Tuple using Spread Operator
 let [a1, ...bc1] = myTuple; // bc1: [string, boolean]
 console.log(`a1: ${a1}`);
 console.log(`bc1: ${bc1}`);
-printSeparator();
+printSeparator02();
 
 // IMPORTANT NOTE: ✍🏽 This one works,
 // use of spread operator for rest of the tuple!
@@ -142,14 +143,14 @@ console.log(`a2: ${a2}`);
 console.log(`b2: ${b2}`);
 console.log(`c2: ${c2}`);
 console.log(`d2: ${d2}`);
-printSeparator();
+printSeparator02();
 
 // Ignoring trailing elements or other elements
 let [a3] = myTuple; // a3: number
 let [, b3] = myTuple; // b3: string
 console.log(`a3: ${a3}`);
 console.log(`b3: ${b3}`);
-printSeparator();
+printSeparator02();
 
 // SUBTOPIC: ⭐ Object Destructuring
 let personalDetails = {
@@ -161,13 +162,13 @@ console.log(`personalDetails: ${JSON.stringify(personalDetails)}`);
 let { firstName, city } = personalDetails;
 
 console.log(`firstName: ${firstName}`, `city: ${city}`);
-printSeparator();
+printSeparator02();
 
 // Assignment without declaration
 let { lastName, country } = { lastName: 'Sridharan', country: 'India' };
 console.log(`lastName: ${lastName}`);
 console.log(`country: ${country}`);
-printSeparator();
+printSeparator02();
 
 // IMPORTANT NOTE: ✍🏽 Property renaming
 // The colon here does not indicate the type.
@@ -179,7 +180,7 @@ let { firstName: givenName, lastName: surname } = {
 
 console.log(`givenName: ${givenName}`);
 console.log(`surname: ${surname}`);
-printSeparator();
+printSeparator02();
 
 // 👆🏽 Read as
 // firstName: givenName 👉🏽 firstName as givenName
@@ -194,5 +195,40 @@ function demoDefaultValues(arg: { a: string; b?: number }) {
 
 demoDefaultValues({ a: 'Srihari' });
 demoDefaultValues({ a: 'Srihari', b: 7 });
-printSeparator();
+printSeparator02();
 
+// SUBTOPIC: ⭐ Spread Operator
+// Opposite of destructing - spread and array into another array.
+const set1 = [1, 2, 3, 4];
+console.log('set1:');
+console.log(set1);
+
+const set2 = [5, 6, 7, 8];
+console.log('set2:');
+console.log(set2);
+
+const combinedSet = [...set1, ...set2, 9, 10, 11, 12];
+console.log('combinedSet:');
+console.log(combinedSet);
+
+printSeparator02();
+
+// IMPORTANT NOTE: ✍🏽 Spread copies the object's enumerable properties.
+// Methods are not included while using spread.
+
+class Person {
+    private name: string;
+    private age: number;
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+
+    getAge(): number {
+        return this.age;
+    }
+}
+
+const sam = new Person('Sam', 30);
+let cloneOfSam = { ...sam };
+// cloneOfSam.getAge(); // ERROR: 02-variable-declaration.ts:233:12 - error TS2339: Property 'getAge' does not exist on type '{}'.
