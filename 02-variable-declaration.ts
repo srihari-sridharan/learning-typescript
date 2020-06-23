@@ -210,6 +210,8 @@ console.log(set2);
 const combinedSet = [...set1, ...set2, 9, 10, 11, 12];
 console.log('combinedSet:');
 console.log(combinedSet);
+console.log('combinedSet.length');
+console.log(combinedSet.length);
 
 printSeparator02();
 
