@@ -4,7 +4,6 @@
     "git.enableSmartCommit": true,
     "git.autofetch": true,
     "window.zoomLevel": 0,
-    "java.home": "C:\\Users\\Srihari\\AppData\\Local\\Programs\\AdoptOpenJDK",
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
     "[perl]": {
         "editor.defaultFormatter": "sfodje.perltidy"
@@ -31,7 +30,8 @@
     "editor.fontFamily": "'Courier New'",
     "debug.console.fontFamily": "'Courier New'",
     "terminal.integrated.fontFamily": "'Courier New'",
-    "todohighlight.keywords": [{
+    "todohighlight.keywords": [
+        {
             "color": "#ff0000",
             "backgroundColor": "yellow",
             "overviewRulerColor": "grey",
@@ -51,6 +51,7 @@
         }
     ],
     "prettier.jsxSingleQuote": true,
+    "prettier.useTabs": false,
     "prettier.singleQuote": true,
-    "prettier.tabWidth": 4
+    "prettier.tabWidth": 4,
 }
